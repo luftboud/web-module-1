@@ -137,6 +137,7 @@ body {
     border-radius: 20px;
     padding: 56px 15% 90px;
     position: relative;
+    overflow-x: hidden;
 }
 
 .features__title {
@@ -313,6 +314,7 @@ body {
     background-color: #EBE3DE;
     padding: 56px 16% 90px;
     border-radius: 20px;
+    overflow-x: hidden;
 }
 
 .advantages__title {
@@ -452,6 +454,7 @@ body {
     box-sizing: border-box;
     overflow-y: hidden;
     position: relative;
+    overflow-x: hidden;
 }
 
 .package__title {
@@ -612,6 +615,7 @@ body {
     align-items: stretch;
     position: relative;
     border-radius: 20px;
+    overflow-x: hidden;
 }
 
 .footer__container {
