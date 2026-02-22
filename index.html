@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>HW1</title>
   </head>
   <body>
     <header class="header">
-      <img src="./src/logo.svg" alt="" aria-hidden="true" class="header__logo" />
+      <img
+        src="./src/logo.svg"
+        alt=""
+        aria-hidden="true"
+        class="header__logo"
+      />
       <nav class="header__menu">
         <a href="#" class="header__menu-item">Про товар</a>
         <span class="header__divider">|</span>
@@ -17,6 +23,33 @@
         <span class="header__divider">|</span>
         <a href="#" class="header__menu-item">Зв’язатися</a>
       </nav>
+
+      <button class="header__burger" aria-label="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 18 12" fill="none">
+            <path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="#33321E" fill-opacity="0.5"/>
+          </svg>
+      </button>
+
+    <div class="header__mobile-menu" id="mobileMenu">
+      <button class="header__mobile-menu-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 14 14" fill="none">
+          <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="#33321E" fill-opacity="0.5"/>
+        </svg>
+      </button>
+
+      <a href="#" class="header__mobile-menu-item">Про товар</a>
+      <a href="#" class="header__mobile-menu-item">Додаток</a>
+      <a href="#" class="header__mobile-menu-item">Відгуки</a>
+      <a href="#" class="header__mobile-menu-item">Звʼязатися</a>
+    </div>
+
+      <div class="header__image-block">
+        <img
+          src="./src/flower_pot.png"
+          alt="green flower in white pot"
+          class="header__image"
+        />
+      </div>
     </header>
     <main>
       <section class="hero">
@@ -33,13 +66,6 @@
           >
             Найкраща пропозиція на Kickstarter
           </a>
-        </div>
-        <div class="hero__image-block">
-          <img
-            src="./src/flower_pot.png"
-            alt="green flower in white pot"
-            class="hero__image"
-          />
         </div>
       </section>
       <section class="features">
@@ -113,39 +139,48 @@
             </p>
           </li>
         </ul>
-
-        <img
-          src="./src/decorative-features.png"
-          alt=""
-          aria-hidden="true"
-          class="decorative-image"
-        />
+        <div class="decorative-image-block">
+          <img
+            src="./src/decorative-features.png"
+            alt=""
+            aria-hidden="true"
+            class="decorative-image"
+          />
+        </div>
       </section>
       <section class="steps">
         <h2 class="steps__title">
           Рослини в’януть? Немає часу на догляд? Ми вирішимо це!
         </h2>
-        <div class="steps__text-block">
-          <h3 class="steps__subtitle">Як це працює</h3>
-          <ol class="steps__list">
-            <li class="steps__item">
-              <span class="number-icon">1</span>
-              <p class="steps__item-text">Заповніть резервуар водою</p>
-            </li>
-            <li class="steps__item">
-              <span class="number-icon">2</span>
-              <p class="steps__item-text">Виберіть режим автополиву</p>
-            </li>
-            <li class="steps__item">
-              <span class="number-icon">3</span>
-              <p class="steps__item-text">
-                Насолоджуйтесь здоровими рослинами!
-              </p>
-            </li>
-          </ol>
-        </div>
-        <div class="steps__video-block">
-          <video src="./src/steps-video.mp4" muted autoplay loop class="steps__video"></video>
+        <div class="steps__content">
+          <div class="steps__text-block">
+            <h3 class="steps__subtitle">Як це працює</h3>
+            <ol class="steps__list">
+              <li class="steps__item">
+                <span class="number-icon">1</span>
+                <p class="steps__item-text">Заповніть резервуар водою</p>
+              </li>
+              <li class="steps__item">
+                <span class="number-icon">2</span>
+                <p class="steps__item-text">Виберіть режим автополиву</p>
+              </li>
+              <li class="steps__item">
+                <span class="number-icon">3</span>
+                <p class="steps__item-text">
+                  Насолоджуйтесь здоровими рослинами!
+                </p>
+              </li>
+            </ol>
+          </div>
+          <div class="steps__video-block">
+            <video
+              src="./src/steps-video.mp4"
+              muted
+              autoplay
+              loop
+              class="steps__video"
+            ></video>
+          </div>
         </div>
       </section>
       <section class="advantages">
@@ -228,45 +263,71 @@
             </p>
           </li>
         </ul>
+        <div class="advantages__decoration-img-block">
+          <img
+            src="./src/decorative-package.png"
+            alt=""
+            aria-hidden="true"
+            class="advantages__decoration-img"
+          />
+        </div>
       </section>
       <section class="app-features">
         <h2 class="app-features__title">Функції мобільного додатку</h2>
-        <ol class="app-features__list">
-          <li class="app-features__item">
-            <span class="number-icon">1</span>
-            <h3 class="app-features__item-title">Управління через смартфон</h3>
-            <p class="app-features__item-text">
-              Додаток дозволяє легко контролювати стан рослин і процес поливу
-              прямо з вашого телефону.
-            </p>
-          </li>
-          <li class="app-features__item">
-            <span class="number-icon">2</span>
-            <h3 class="app-features__item-title">Розумні сповіщення</h3>
-            <p class="app-features__item-text">
-              Нагадування, коли рослині треба догляд.
-            </p>
-          </li>
-          <li class="app-features__item">
-            <span class="number-icon">3</span>
-            <h3 class="app-features__item-title">Щотижнева статистика</h3>
-            <p class="app-features__item-text">
-              Прості й зрозумілі звіти про стан рослин для покращення вашого
-              догляду.
-            </p>
-          </li>
-          <li class="app-features__item">
-            <span class="number-icon">4</span>
-            <h3 class="app-features__item-title">Режими поливу</h3>
-            <p class="app-features__item-text">
-              Режими поліву графік графіка на основі потреб рослини: полив
-              створюється за низької вологості обгрунтовано, а AI оптимізує
-              процес.
-            </p>
-          </li>
-        </ol>
-        <div class="app-features__video-block">
-          <video src="./src/app-features.mp4" muted autoplay loop class="app-features__video"></video>
+        <div class="app-features__container">
+          <ol class="app-features__list">
+            <li class="app-features__item">
+              <div class="app-features__item-header">
+                <span class="number-icon">1</span>
+                <h3 class="app-features__item-title">
+                  Управління через смартфон
+                </h3>
+              </div>
+              <p class="app-features__item-text">
+                Додаток дозволяє легко контролювати стан рослин і процес поливу
+                прямо з вашого телефону.
+              </p>
+            </li>
+            <li class="app-features__item">
+              <div class="app-features__item-header">
+                <span class="number-icon">2</span>
+                <h3 class="app-features__item-title">Розумні сповіщення</h3>
+              </div>
+              <p class="app-features__item-text">
+                Нагадування, коли рослині треба догляд.
+              </p>
+            </li>
+            <li class="app-features__item">
+              <div class="app-features__item-header">
+                <span class="number-icon">3</span>
+                <h3 class="app-features__item-title">Щотижнева статистика</h3>
+              </div>
+              <p class="app-features__item-text">
+                Прості й зрозумілі звіти про стан рослин для покращення вашого
+                догляду.
+              </p>
+            </li>
+            <li class="app-features__item">
+              <div class="app-features__item-header">
+                <span class="number-icon">4</span>
+                <h3 class="app-features__item-title">Режими поливу</h3>
+              </div>
+              <p class="app-features__item-text">
+                Режими поліву графік графіка на основі потреб рослини: полив
+                створюється за низької вологості обгрунтовано, а AI оптимізує
+                процес.
+              </p>
+            </li>
+          </ol>
+          <div class="app-features__video-block">
+            <video
+              src="./src/app-features.mp4"
+              muted
+              autoplay
+              loop
+              class="app-features__video"
+            ></video>
+          </div>
         </div>
       </section>
       <section class="package">
@@ -315,23 +376,27 @@
             </div>
           </div>
         </div>
-        <img
-          src="./src/decorative-package.png"
-          alt=""
-          aria-hidden="true"
-          class="package__decoration-img"
-        />
+        <div class="package__decoration-img-block">
+          <img
+            src="./src/decorative-package.png"
+            alt=""
+            aria-hidden="true"
+            class="package__decoration-img"
+          />
+        </div>
       </section>
       <section class="feedback">
         <h2 class="feedback__title">Відгуки</h2>
         <ul class="feedback__list">
           <li class="feedback__item">
-            <img
-              src="./src/feedback-image-1.png"
-              alt="a woman with a flower"
-              class="feedback__item-pic"
-            />
-            <h3 class="feedback__item-name">Дарина</h3>
+            <div class="feedback__item-head">
+              <img
+                src="./src/feedback-image-1.png"
+                alt="a woman with a flower"
+                class="feedback__item-pic"
+              />
+              <h3 class="feedback__item-name">Дарина</h3>
+            </div>
             <p class="feedback__item-text">
               LeafyPod — ідеальне рішення для догляду за рослинами без зайвих
               турбот. Він самостійно контролює полив, освітлення і температуру,
@@ -340,12 +405,14 @@
             </p>
           </li>
           <li class="feedback__item">
-            <img
-              src="./src/feedback-image-2.png"
-              alt="a man with a flower"
-              class="feedback__item-pic"
-            />
-            <h3 class="feedback__item-name">Арсен</h3>
+            <div class="feedback__item-head">
+              <img
+                src="./src/feedback-image-2.png"
+                alt="a man with a flower"
+                class="feedback__item-pic"
+              />
+              <h3 class="feedback__item-name">Арсен</h3>
+            </div>
             <p class="feedback__item-text">
               Це чудово підходить для новачків, які тільки починають вирішувати
               проблеми, з якими ми стикаємося як початківці доглядачі рослин,
@@ -354,12 +421,14 @@
             </p>
           </li>
           <li class="feedback__item">
-            <img
-              src="./src/feedback-image-3.png"
-              alt="a woman with a flower"
-              class="feedback__item-pic"
-            />
-            <h3 class="feedback__item-name">Софія</h3>
+            <div class="feedback__item-head">
+              <img
+                src="./src/feedback-image-3.png"
+                alt="a woman with a flower"
+                class="feedback__item-pic"
+              />
+              <h3 class="feedback__item-name">Софія</h3>
+            </div>
             <p class="feedback__item-text">
               Цей вазон також ідеально підходить для тих, хто подорожує і не
               хоче хвилюватися, як поливати рослини або в якому стані вони
@@ -371,42 +440,60 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__text-block">
-        <img src="./src/logo.svg" alt="" class="footer__logo" />
-        <p class="footer__text">
-          Розумний догляд за вашими рослинами — легко і без турбот!
-        </p>
-        <div class="footer__socials-block">
-          <p class="footer__text">Слідкуйте за нами</p>
-          <div class="footer__socials-list">
-            <a href="#" class="footer__socials-icon">
-              <img src="./src/social-1.svg" alt="" />
-            </a>
-            <a href="#" class="footer__socials-icon">
-              <img src="./src/social-2.svg" alt="" />
-            </a>
-            <a href="#" class="footer__socials-icon">
-              <img src="./src/social-3.svg" alt="" />
-            </a>
+      <div class="footer__container">
+        <div class="footer__text-block">
+          <img src="./src/logo.svg" alt="" class="footer__logo" />
+          <p class="footer__text">
+            Розумний догляд за вашими рослинами — легко і без турбот!
+          </p>
+          <div class="footer__socials-block">
+            <p class="footer__text">Слідкуйте за нами</p>
+            <div class="footer__socials-list">
+              <a href="#" class="footer__socials-icon">
+                <img src="./src/social-1.svg" alt="facebook icon" />
+              </a>
+              <a href="#" class="footer__socials-icon">
+                <img src="./src/social-2.svg" alt="youtube icon" />
+              </a>
+              <a href="#" class="footer__socials-icon">
+                <img src="./src/social-3.svg" alt="instagram icon" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer__links-block">
-        <div class="footer__policy-block">
-          <a href="#" class="footer__link">Умови використання</a>
-          <a href="#" class="footer__link">Політика конфіденційності</a>
+        <div class="footer__links-block">
+          <div class="footer__policy-block">
+            <a href="#" class="footer__link">Умови використання</a>
+            <a href="#" class="footer__link">Політика конфіденційності</a>
+          </div>
+          <a href="mailto:info@leafypod.one" class="footer__text"
+            >info@leafypod.one</a
+          >
+          <p class="footer__text">&copy; 2024 LeafyPod. Усі права захищені.</p>
         </div>
-        <a href="mailto:info@leafypod.one" class="footer__text"
-          >info@leafypod.one</a
-        >
-        <p class="footer__text">&copy; 2024 LeafyPod. Усі права захищені.</p>
       </div>
-      <img
-        src="./src/decorative-footer.png"
-        alt=""
-        aria-hidden="true"
-        class="footer__decoration-img"
-      />
+      <div class="footer__decoration-img-block">
+        <img
+          src="./src/decorative-footer.png"
+          alt=""
+          aria-hidden="true"
+          class="footer__decoration-img"
+        />
+      </div>
     </footer>
   </body>
+
+  <script>
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('#mobileMenu');
+const closeBtn = document.querySelector('.header__mobile-menu-close');
+
+burger.addEventListener('click', () => {
+  menu.classList.add('is-open');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('is-open');
+});
+</script>
 </html>
